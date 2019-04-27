@@ -1,25 +1,54 @@
 import React from 'react'
-import './static/style.scss'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import Head from './components/Head.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
-import Head from './components/Head.jsx'
-import About from './components/About.jsx'
-import aboutData from './static/aboutData.js'
-import carsData from './static/carsData.js'
 import Cars from './components/Cars.jsx'
-import AboutCar from './components/AboutCar.jsx'
+import About from './components/About'
+import History from './components/History.jsx'
+import AboutCarPage from './components/AboutCarPage'
+import carsData from './static/carsData.js'
+import style from './static/style.scss'
 
-function App() {
-  return (
-    <div className="root">
+function App(){
+  return(
+    <Router>
+      <Header />
       <Head />
-      <Header/>
-      {/* {aboutData.map(about => (<About info = {about.info} /> ))} */}
-      {/* <Cars /> */}
-      <AboutCar />
-      <Footer/>  
-    </div>
-  );
+
+      <Route exact path='/' component={CarsPage} />
+      <Route exact path='/aboutCompany' component={aboutCompany} />
+      <Route exact path='/history' component={historyCompany} />
+      <Route exact path='/car/:id' component={carInfo} />
+
+      <Footer />
+    </Router>
+    
+  )
 }
 
-export default App;
+const CarsPage = props =>(
+  <div className="root">
+    <Cars />
+  </div>
+)
+
+const aboutCompany = props =>(
+  <div className="root">
+    <About />
+  </div>
+)
+
+const historyCompany = props =>(
+  <div className="root">
+    <History />
+  </div>
+)
+
+const carInfo = props =>(
+  <div className="root">
+    <AboutCarPage />
+  </div>
+)
+
+export default App

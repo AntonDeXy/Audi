@@ -2,6 +2,7 @@ import rs6 from './cars/audiRs6.jpg'
 import r8 from './cars/r8.jpg'
 const carsInfo = [
   {
+    id: 1,
     name: 'Audi RS6',
     img: rs6,
     year: '2018',
@@ -16,6 +17,7 @@ const carsInfo = [
     `
   },
   {
+    id: 2,
     name: 'Audi R8',
     img: r8,
     year: '2019',
@@ -29,6 +31,7 @@ const carsInfo = [
 
     `
   },
+  
 ]
 
 export default carsInfo

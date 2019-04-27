@@ -1,16 +1,23 @@
 import React from 'react'
 import logo from '../static/logo.png'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 function Header(){
   return(
     <header>
-      <img src={logo} alt=""/>
+      <Link to='/'>
+        <img src={logo} alt=""/>
+      </Link>
       <nav>
         <div>
-          <a href="#">Історія компанії</a>
+          <Link to="/history">
+              Історія компанії
+          </Link>
         </div>
         <div>
-          <a href="#">Машини</a>
+          <Link to='/'>
+            Машини
+          </Link>
         </div>
       </nav>
     </header>

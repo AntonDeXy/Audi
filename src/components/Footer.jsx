@@ -4,7 +4,7 @@ function Footer(){
   return(
     <footer>
       <div className='owner'>
-        <span>Проект Лісунова Владислава</span>
+        <span>Audi</span>
       </div>
       <div className='inst'>
         <a href='https://www.instagram.com/audi_moto_car'>
