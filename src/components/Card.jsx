@@ -1,14 +1,15 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 
-const Card = props => {
-  return(
+const Card = ({ id, img, name }) => (
+  <Link to={`/car/${id}`} >
     <div className='card'>
-      <img src={props.img} alt=""/>
+      <img src={img} alt=""/>
       <div>
-        <h2>{props.name}</h2>
+        <h2>{name}</h2>
       </div>
     </div>
-  )
-}
+  </Link>
+)
 
 export default Card

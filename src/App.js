@@ -19,7 +19,7 @@ function App(){
       <Route exact path='/' component={CarsPage} />
       <Route exact path='/aboutCompany' component={aboutCompany} />
       <Route exact path='/history' component={historyCompany} />
-      <Route exact path='/car/:id' component={carInfo} />
+      <Route exact path='/car/:id' component={AboutCarPage} />
 
       <Footer />
     </Router>
@@ -42,12 +42,6 @@ const aboutCompany = props =>(
 const historyCompany = props =>(
   <div className="root">
     <History />
-  </div>
-)
-
-const carInfo = props =>(
-  <div className="root">
-    <AboutCarPage />
   </div>
 )
 
