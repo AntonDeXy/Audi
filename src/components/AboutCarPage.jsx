@@ -6,7 +6,7 @@ const AboutCar = props => {
   const id = props.match.params.id
 
   const carInfo = carsData.filter(car => Number(car.id) === Number(id))[0]
-
+  debugger
   return (
     <div className="aboutCar">
       <div className="img">
@@ -41,7 +41,6 @@ const AboutCar = props => {
         </span>
         <span>
           {carInfo.info}
-          {/* <b>Audi R8</b> — середньомоторний повнопривідний спортивний автомобіль класу суперкар, вироблений німецьким автовиробником Audi, вперше представлений в 2006 році на Паризькому автосалоні (Paris Motor Show). В основі дизайну Audi R8 базується на концепт-карі Audi LeMans quattro 2003 року, який був показаний на Женевському і Франкфуртському автосалонах того року. */}
         </span>
       </div>
     </div>

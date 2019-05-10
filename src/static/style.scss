@@ -112,6 +112,9 @@ footer{
   grid-auto-rows: 230px;
   grid-gap: 20px;
   justify-content: center;
+  a{
+    text-decoration: none;
+  }
   .card{
     border-radius: 10px;
     display: grid;
@@ -120,23 +123,33 @@ footer{
     justify-items: center;
     overflow: hidden;
     background-color: #737373;           
+    text-decoration: none;
+    align-items: center;
     img{
       overflow: hidden;
       border-radius: 10px 10px 0 0;
       width: 100%;
+    }
+    .car_name{
+      height: 100%;
     }
     div{
       width: 100%;
       background-color: #737373;       
       z-index: 2;
       h2{
+        color: white;
         text-align: center;
         margin: 0;
+      }
+      h2:hover{
+        color: #F20505;
       }
     }
   }
   .card:hover{
     transform: scale(1.1);
+    // max-width: calc(100% + 10px);
     box-shadow: 5px 5px 10px black;
     cursor: pointer;
     img{

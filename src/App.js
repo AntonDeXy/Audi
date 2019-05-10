@@ -17,9 +17,9 @@ function App(){
       <Head />
 
       <Route exact path='/' component={CarsPage} />
-      <Route exact path='/aboutCompany' component={aboutCompany} />
-      <Route exact path='/history' component={historyCompany} />
-      <Route exact path='/car/:id' component={AboutCarPage} />
+      <Route path='/aboutCompany' component={aboutCompany} />
+      <Route path='/history' component={historyCompany} />
+      <Route path='/car/:id' component={AboutCarPage} />
 
       <Footer />
     </Router>
